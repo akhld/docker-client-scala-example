@@ -5,11 +5,11 @@ import com.spotify.docker.client.messages.{ContainerConfig, HostConfig}
 
 object DockerUtils {
 
-  private val DOCKER_IMAGE = "hello-world"
-  private val IMAGE_ID = "fce289e99eb9"
+  private val DOCKER_IMAGE = "ubuntu"
+  private val IMAGE_ID = "2ca708c1c9cc"
 
   private val docker = DefaultDockerClient.fromEnv().build()
-  docker.pull(DOCKER_IMAGE)
+  //docker.pull(DOCKER_IMAGE)
 
   private val hostConfig = HostConfig.builder().build()
   private val containerConfig = ContainerConfig.builder()
